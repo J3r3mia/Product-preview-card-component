@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+:root {
+    /* Primary */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%); 
+    /* Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --Font-M: 'Montserrat', sans-serif;
+    --Font-F: 'Fraunces', serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--Font-M);
+    font-size: 14px;
+    background-color: var(--Cream);
+}
+.container {
+    display: grid;
+    max-width: 375px;
+}
+.image-container img{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 14.7rem; 
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    background-color: var(--White);
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.prices {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-content: space-between;
+    gap: 1rem;
+}
+.prices .price {
+    font-family: var(--Font-F);
+    font-size: x-large;
+    font-weight: 700;
+    color: var(--Dark-cyan);
+
+}
+.prices .previous-price {
+    font-size: 0.85rem;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+}
+button {
+    font-family: var(--Font-M);
+    font-weight: bolder;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    gap: 1rem;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border-style: none;
+}
+main {
+    margin: 1rem;
+}
+button:hover {
+    cursor: pointer;
+    background-color: var(--Very-dark-blue);
+}
+button img {
+    height: 0.8rem;
+}
+.creator {
+    font-size: .825rem;
+    line-height: 1.4rem;
+    color: var(--Dark-grayish-blue);
+    
+}
+.heading {
+    font-family: var(--Font-M);
+    font-size: 0.7rem;
+    letter-spacing: 0.4rem;
+    color: var(--Dark-grayish-blue);
+}
+.slogan, p , .heading{
+    margin: .9rem;
+}
+.slogan {
+    font-family: var(--Font-F);
+    line-height: 1.6rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--Very-dark-blue);
+}
+.attribution { 
+    font-size: 0.7rem; 
+    text-align: center; 
+    margin-top: 1rem;
+}
+.attribution a { 
+    font-size: larger;
+    font-style: italic;
+    text-decoration: none;
+    font-weight: bold;
+    color: hsl(192, 85%, 34%); 
+}
+
+@media (min-width: 600px) { 
+    .container {
+        min-width: 600px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .heading {
+        letter-spacing: 0.8rem;
+    }
+    .card-content {
+        border-radius: 0 10px 10px 0;
+    }
+    .image-container img{ 
+        height: 370px;
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+
+
+
+
